@@ -7,7 +7,9 @@ body {
 .navbar-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 50px;
+    row-gap: 25px;
 
     justify-content: space-between;
 
@@ -15,7 +17,7 @@ body {
     width: 100%;
 
     font-family: "Inter", sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 15px;
     color: #eae9e5;
     background-color: #242629;
@@ -28,11 +30,12 @@ body {
 .navbar-container-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     column-gap: 50px;
 
     align-items: center;
 
-    padding: 0px 50px 0px 0px;
+    padding: 0px 60px 0px 0px;
 }
 
 .wrap {

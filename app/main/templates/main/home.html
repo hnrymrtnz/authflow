@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrap">
+    <div class="container">
+        <h1> Welcome to Authflow.</h1>
+        <p> Visualize different single sign-on flows using the buttons below, depending on the protocol. Configuration is set within the application, and depends on LDAP and Kerberos.</p>
+        <h2> OpenID Connect </h2>
+        <div class="container-section">
+            <button class="oidc" type="submit" onclick="location.href='/oidc_auth_code_flow'" value="oidc-auth-code-flow"> Authorization Code Flow</button>
+            <button class="oidc" type="submit" value="oidc-implict-flow"> Implicit Flow</button>
+            <button class="oidc" type="submit" value="oidc-implict-flow"> Client Credentials Flow</button>
+        </div>
+        <h2> SAML </h2>
+        <div class="container-section">
+            <button class="saml" type="submit" value="saml-sp"> SP-Initiated SSO </button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

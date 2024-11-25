@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> AuthFlow </title>
-    <link rel="icon" type="image/x-icon" href="/app/static/images/authflow.ico">
-    <link rel="stylesheet" href="/app/static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/authflow.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -13,14 +13,16 @@
 <body>
     <nav>
         <div class="navbar-container">
-            <img src="/app/static/images/authflow.png" alt="Logo" width="50px" height="50px">
+            <img src="{{ url_for('static', filename='images/authflow.png') }}" alt="Logo" width="50px" height="50px">
             <div class="navbar-container-list">
                 <p> Home </p>
-                <p> Learn More </p>
+                <p> SAML </p>
+                <p> OpenID Connect </p>
                 <p> GitHub </p>
             </div>
         </div>
     </nav>
+
     {% block content %}{% endblock %}
 </body>
 </html>
