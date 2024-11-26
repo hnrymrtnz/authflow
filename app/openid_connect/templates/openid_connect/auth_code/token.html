@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrap">
+    <div class="container">
+        <h1> Authorization Code Flow </h1>
+        <p> The authorization code flow is used to obtain both access and refresh tokens by exchanging a code.
+            Because it's a redirection-based flow, the client must be able to interact with the resource owner's user agent (typically a web browser),
+            and capable of receiving incoming requests from the authorization server.
+        </p>
+        <h2> Step Three: Token Decode </h2>
+        <p> After exchanging the code for the token(s), you'll be able to decode them, and see any returned claims within the payload. </p>
+        <p> <b>Access Token:</b> {{ access_token }} <br><br>
+        <b>Id Token:</b> {{ id_token }} </p>
+        <p> These claims are either a part of the requested scopes, or custom claims that are configured within the client.  </p>
+        <p> Click below to get decode the token and see the claim(s): </p>
+        <div class="container-section">
+            <button type="submit" onclick="location.href='claims'" value="auth-code_token"> Claims </button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

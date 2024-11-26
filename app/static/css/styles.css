@@ -1,6 +1,6 @@
 body {
     margin: 0;
-
+    box-sizing: border-box;
     background-color: #181a1c;
 }
 
@@ -12,8 +12,6 @@ body {
     row-gap: 25px;
 
     justify-content: space-between;
-
-    position: fixed;
     width: 100%;
 
     font-family: "Inter", sans-serif;
@@ -22,9 +20,12 @@ body {
     color: #eae9e5;
     background-color: #242629;
 
-    padding: 10px 25px 10px 25px;
 
     border-bottom: 0px solid #eae9e530;
+}
+
+.navbar-container img {
+    padding: 10px 20px 10px 20px;
 }
 
 .navbar-container-list {
@@ -33,16 +34,16 @@ body {
     flex-wrap: wrap;
     column-gap: 50px;
 
-    align-items: center;
+    padding: 10px 20px 10px 20px;
 
-    padding: 0px 60px 0px 0px;
+    align-items: center;
 }
 
 .wrap {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 150px; /* Fixed distance from the top */
 }
 
 .container {
@@ -77,7 +78,9 @@ body {
 .container p {
     font-size: 15px;
     font-weight: 300;
-    color: #eae9e550;
+    color: #eae9e565;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
 
     margin: 0px 0px 25px 0px;
 }
