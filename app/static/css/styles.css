@@ -1,7 +1,7 @@
 body {
     margin: 0;
 
-    background-color: #242629;
+    background-color: #181a1c;
 }
 
 .navbar-container {
@@ -22,9 +22,9 @@ body {
     color: #eae9e5;
     background-color: #242629;
 
-    padding: 15px 25px 15px 25px;
+    padding: 10px 25px 10px 25px;
 
-    border-bottom: 1px solid #eae9e530;
+    border-bottom: 0px solid #eae9e530;
 }
 
 .navbar-container-list {
@@ -71,7 +71,7 @@ body {
     font-size: 20px;
     font-weight: 600px;
 
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 10px 0px;
 }
 
 .container p {
@@ -79,7 +79,7 @@ body {
     font-weight: 300;
     color: #eae9e550;
 
-    margin: 0px 0px 35px 0px;
+    margin: 0px 0px 25px 0px;
 }
 
 .container button {
@@ -90,7 +90,7 @@ body {
     background-color: #242629;
     color: #eae9e5;
 
-    border: 1px solid #eae9e530;
+    border: 0px solid #eae9e530;
     border-radius: 5px;
 
     width: 100%;

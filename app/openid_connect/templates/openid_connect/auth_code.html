@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrap">
+    <div class="container">
+        <h1> Authorization Code Flow </h1>
+        <p> The authorization code flow is used to obtain both access and refresh tokens by exchanging a code.
+            Because it's a redirection-based flow, the client must be able to interact with the resource owner's user agent (typically a web browser),
+            and capable of receiving incoming requests from the authorization server.
+        </p>
+
+        <h2> Step One: Authorization Endpoint </h2>
+        <p> The first step of the flow is to redirect to the authorization endpoint. This URL includes the client ID, requested scopes,
+            and redirect URI. Once successful, the authorization server will return a code.
+        </p>
+        <p> Click below to get redirected: </p>
+        <div class="container-section">
+            <button type="submit" value="auth-code_auth"> Authorization Endpoint </button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
