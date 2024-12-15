@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrap">
+    <div class="container">
+        <h1> Implicit Grant Flow </h1>
+        <p> The implicit grant flow is used for single-page applications (like JavaScript or React.js) to obtain access and id tokens without having to exchange a code. Although this is rarely used due to its lack of security, it offers the ability to see the tokens within the URL.
+        </p>
+
+        <h2> Step One: Authorization </h2>
+        <p> The first step of the flow is to redirect to the authorization endpoint. This URL includes the client ID, requested scopes,
+            and redirect URI. Note that with this flow, we are setting the grant type to "token," which will return the tokens in the callback URL, as opposed to a code.
+        </p>
+        <p> Click below to get redirected: </p>
+        <div class="container-section">
+            <button type="submit" onclick="location.href='implicit/auth'" value="implicit_auth"> Authorization Endpoint </button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

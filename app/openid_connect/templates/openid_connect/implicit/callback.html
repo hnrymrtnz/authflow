@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrap">
+    <div class="container">
+        <h1> Implicit Grant Flow </h1>
+        <p> The implicit grant flow is used for single-page applications (like JavaScript or React.js) to obtain access and id tokens without having to exchange a code. Although this is rarely used due to its lack of security, it offers the ability to see the tokens within the URL.
+        </p>
+        <h2> Step Two: Retrieve Tokens </h2>
+        <p> Once successfully authenticated, you'll be able to see the tokens in the URL. For convenience, the tokens, state, and expiration are also shown below. </p>
+        
+        <p> <b>Access Token:</b> <span id="access_token"></span> <br><br>
+        <b>ID Token:</b> <span id="id_token"></span> <br><br>
+        <b>Session State:</b> <span id="session_state"></span> <br><br>
+        <b>Expires In:</b> <span id="expires_in"></span></p>
+    </div>
+</div>
+
+<script>
+    const hashParams = new URLSearchParams(window.location.hash.substring(1));
+    const accessToken = hashParams.get('access_token');
+    const idToken = hashParams.get('id_token');
+    const sessionState = hashParams.get('session_state');
+    const expiresIn = hashParams.get('expires_in');
+
+    document.getElementById('access_token').textContent = accessToken || 'Not available';
+    document.getElementById('id_token').textContent = idToken || 'Not available';
+    document.getElementById('session_state').textContent = sessionState || 'Not available';
+    document.getElementById('expires_in').textContent = expiresIn || 'Not available';
+</script>
+
+
+{% endblock %}
