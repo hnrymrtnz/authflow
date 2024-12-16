@@ -13,12 +13,8 @@
 <body>
     <nav>
         <div class="navbar-container">
-            <img src="{{ url_for('static', filename='images/authflow.png') }}" alt="Logo" width="45px" height="45px">
+            <img src="{{ url_for('static', filename='images/authflow.png') }}" onclick="location.href='/'" alt="Logo" width="45px" height="45px">
             <div class="navbar-container-list">
-                <p> Home </p>
-                <p> SAML </p>
-                <p> OpenID Connect </p>
-                <p> GitHub </p>
             </div>
         </div>
     </nav>

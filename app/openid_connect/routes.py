@@ -54,7 +54,7 @@ def auth_code_flow_token():
 
 @openid_connect.route('/auth_code/claims')
 def auth_code_flow_claims():
-    claims = jwt.decode(session['access_token'], options={"verify_signature": False})
+    claims = jwt.decode(session['id_token'], options={"verify_signature": False})
 
     return render_template('auth_code/claims.html', claims=claims)
 
